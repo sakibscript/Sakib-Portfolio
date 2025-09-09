@@ -38,11 +38,14 @@ export function Contact() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:3000/message/message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        "https://sakib-portfolio-psui.onrender.com/message/message",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
 
       const data = await res.json();
 
@@ -63,7 +66,6 @@ export function Contact() {
 
   return (
     <section className="animate-fadeIn text-text-para_light dark:text-text-para_dark">
-      import toast, {Toaster} from "react-hot-toast";
       <Toaster
         position="top-right"
         toastOptions={{
