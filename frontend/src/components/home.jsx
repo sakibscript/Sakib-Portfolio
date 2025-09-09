@@ -1,126 +1,7 @@
-// import { FaGithub, FaLinkedinIn, FaTwitter, FaDownload } from "react-icons/fa6";
-// import { Link } from "react-router-dom";
-// import Me from "../assets/me.jpg";
-
-// export function Home() {
-//   const links = [
-//     {
-//       id: 1,
-//       icon: <FaGithub />,
-//       url: "https://github.com/sakibscript",
-//     },
-//     {
-//       id: 2,
-//       icon: <FaLinkedinIn />,
-//       url: "https://www.linkedin.com/in/sakibul-alam-6ab53b325/",
-//     },
-//     {
-//       id: 3,
-//       icon: <FaTwitter />,
-//       url: "https://twitter.com/sakibscript",
-//     },
-//   ];
-//   return (
-//     <div className="flex justify-center animate-fadeIn">
-//       <div>
-//         <div className="flex justify-around items-center gap-14">
-//           <div className="flex flex-col justify-center items-start gap-4 max-w-4xl p-6 ">
-//             {/* <div className="flex justify-around items-start gap-6 w-full"> */}
-//             <span>Software Developer</span>
-//             <h1 className="text-3xl">Hello I'm</h1>
-//             <h2 className="text-6xl text-bold text-primary">Sakibul Alam</h2>
-//             <p className="text-sm max-w-md">
-//               Passionate about building modern, scalable, and responsive web
-//               applications. Always eager to learn and explore the latest
-//               technologies in web development.
-//             </p>
-//             <div className="flex justify-evenly items-center gap-6 mt-2 text-xs">
-//               <div
-//                 className={
-//                   "border border-primary-dark rounded-2xl px-4 py-1 text-gray-300 cursor-pointer hover:text-primary hover:border-primary hover:shadow-glow flex items-center gap-2 w-max"
-//                 }
-//               >
-//                 <div className="flex items-center gap-2">
-//                   RESUME
-//                   <svg
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     fill="none"
-//                     viewBox="0 0 24 24"
-//                     stroke-width="1.5"
-//                     stroke="currentColor"
-//                     class="size-6"
-//                     className="h-4 w-4"
-//                   >
-//                     <path
-//                       stroke-linecap="round"
-//                       stroke-linejoin="round"
-//                       d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-//                     />
-//                   </svg>
-//                 </div>
-//               </div>
-//               {/* social links */}
-//               <div className="flex justify-around items-center gap-4">
-//                 {links.map((link) => (
-//                   <Link
-//                     key={link.id}
-//                     className="border border-primary-dark rounded-2xl px-2 py-1 text-sm text-gray-300 cursor-pointer hover:text-primary hover:border-primary hover:shadow-glow"
-//                     to={link.url}
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                   >
-//                     {link.icon}
-//                   </Link>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className="rounded-full p-1 bg-gradient-to-tr from-primary to-accent">
-//             <img
-//               src={Me}
-//               alt="Sakibul Alam"
-//               className="rounded-full w-80 h-80 object-cover border-4 border-background shadow-2xl hover:scale-105 transition-transform duration-300"
-//             />
-//           </div>
-//         </div>
-//         <div className="flex justify-around items-center gap-14 mt-20 text-xs w-full">
-//           {/* experience */}
-//           <div className="flex justify-end gap-3">
-//             <h1 className="text-4xl font-bold">1</h1>
-//             <div className="text-sm flex flex-col">
-//               Years of <div>experience</div>
-//             </div>
-//           </div>
-//           {/* projects */}
-//           <div className="flex justify-end gap-3">
-//             <h1 className="text-4xl font-bold">26</h1>
-//             <div className="text-sm flex flex-col">
-//               projects<div>completed</div>
-//             </div>
-//           </div>
-//           {/* technologies */}
-//           <div className="flex justify-end gap-3">
-//             <h1 className="text-4xl font-bold">8</h1>
-//             <div className="text-sm flex flex-col">
-//               Technologies <div>mastered</div>
-//             </div>
-//           </div>
-//           {/* code commits */}
-//           <div className="flex justify-end gap-3">
-//             <h1 className="text-4xl font-bold">87</h1>
-//             <div className="text-sm flex flex-col">
-//               Code <div>commits</div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 import { FaDownload, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import Me from "../assets/me.jpg";
+import Me from "../assets/me.png";
+import resume from "../assets/Resume-Sakib.pdf";
 import { useEffect, useRef, useState } from "react";
 
 export function Home() {
@@ -151,17 +32,17 @@ export function Home() {
     {
       id: 2,
       statTitle: "Projects Completed",
-      statValue: "26",
+      statValue: "8",
     },
     {
       id: 3,
       statTitle: "Technologies Mastered",
-      statValue: "8",
+      statValue: "14",
     },
     {
       id: 4,
       statTitle: "Code Commits",
-      statValue: "87",
+      statValue: "80",
     },
   ];
 
@@ -203,7 +84,7 @@ export function Home() {
           <h1 className="text-2xl md:text-3xl font-semibold text-text-para_light dark:text-text-para_dark">
             Hello I'm
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold text-primary-dark">
+          <h2 className="text-5xl md:text-6xl font-bold text-primary-dark">
             Sakibul Alam
           </h2>
           <p className="text-sm md:text-base text-text-para_light dark:text-text-para_dark leading-relaxed">
@@ -215,7 +96,8 @@ export function Home() {
           {/* Resume & Social Links */}
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 mt-4">
             <a
-              href="/resume.pdf"
+              href={resume}
+              download={true}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-primary rounded-2xl px-4 py-2 text-text-para_light dark:text-text-para_dark cursor-pointer 
@@ -244,7 +126,7 @@ export function Home() {
         </div>
 
         {/* Profile Image */}
-        <div className="rounded-full p-1 bg-gradient-to-tr from-primary to-accent">
+        <div className="rounded-full p-1 bg-gradient-to-b from-primary/60 to-accent/50 shadow-accent/40 shadow-2xl">
           <img
             src={Me}
             alt="Sakibul Alam"
@@ -264,7 +146,7 @@ export function Home() {
               className="flex items-center justify-center gap-4"
             >
               <h1
-                className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-primary to-accent 
+                className="text-4xl md:text-5xl font-bold  bg-gradient-to-r from-primary to-accent 
                      text-transparent bg-clip-text"
               >
                 {count}
