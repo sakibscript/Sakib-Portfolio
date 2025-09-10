@@ -36,9 +36,8 @@ export function Resume() {
             Why hire me?
           </h1>
           <p className="text-sm text-text-para_light dark:text-text-para_dark">
-            I’m dedicated to building optimized, user-friendly applications and
-            always eager to learn, adapt, and bring creative solutions to every
-            project.
+            Experienced, skilled, and educated to deliver efficient,
+            user-friendly, and innovative applications
           </p>
           {resume.map((item) => (
             <button

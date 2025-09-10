@@ -66,7 +66,7 @@ export default function App() {
       <section
         id="resume"
         className="min-h-screen py-24 px-6 border-t border-gray-300 dark:border-gray-800 scroll-mt-24"
-        data-aos="flip-down"
+        data-aos="fade-down"
         data-aos-delay="300"
       >
         <div className="max-w-6xl mx-auto">

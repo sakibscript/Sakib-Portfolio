@@ -151,7 +151,7 @@ export function Home() {
               >
                 {count}
               </h1>
-              <p className="text-sm w-16 text-text-para_light dark:text-text-para_dark">
+              <p className="text-sm w-16 text-text-para_light/80 dark:text-text-para_dark/80">
                 {stat.statTitle}
               </p>
             </div>
