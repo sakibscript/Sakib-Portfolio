@@ -22,7 +22,7 @@ export function Footer() {
   return (
     <footer className="bg-background-light dark:bg-background-dark text-text-para_light dark:text-text-para_dark py-8 border-t border-gray-300 dark:border-gray-700 transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-        <h1 className="text-2xl font-bold text-black ">Sakib</h1>
+        <h1 className="text-2xl font-bold">Sakib</h1>
 
         <div className="flex gap-6 flex-wrap justify-center">
           {links.map((link) => (
