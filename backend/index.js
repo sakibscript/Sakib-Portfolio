@@ -8,7 +8,7 @@ const { messageRouter } = require("./routes/message");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors("https://sakib-portfolio-psui.onrender.com"));
 
 app.use("/message", messageRouter);
 
