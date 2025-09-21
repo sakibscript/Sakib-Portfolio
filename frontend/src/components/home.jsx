@@ -46,8 +46,6 @@ export function Home() {
     },
   ];
 
-  // Helper for animated counting
-
   function useCountUp(to, duration = 2000) {
     const [count, setCount] = useState(1);
     const raf = useRef();
@@ -124,14 +122,32 @@ export function Home() {
             </div>
           </div>
         </div>
-
         {/* Profile Image */}
-        <div className="rounded-full p-1 bg-gradient-to-b from-primary/60 to-accent/50 shadow-accent/40 shadow-2xl">
+        {/* <div className="rounded-full p-1 bg-gradient-to-b from-primary/60 to-accent/50 shadow-accent/40 shadow-2xl">
           <img
             src={Me}
             alt="Sakibul Alam"
             className="rounded-full w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover border-4 border-background-light dark:border-background-dark shadow-2xl 
                        hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div> */}
+
+        <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex-shrink-0 mx-auto">
+          <div
+            className="absolute inset-0 rounded-full 
+    bg-gradient-to-tr from-sky-500 via-slate-400 to-teal-600 
+    dark:from-sky-600 dark:via-slate-500 dark:to-teal-700
+    animate-spin-slow blur-3xl opacity-50 z-0"
+          ></div>
+
+          <div className="absolute inset-1 rounded-full border-4 border-white/30 backdrop-blur-sm z-10"></div>
+
+          <img
+            src={Me}
+            alt="Sakibul Alam"
+            className="relative w-full h-full object-cover rounded-full z-20 shadow-2xl 
+      transition-transform duration-500 hover:scale-110 "
           />
         </div>
       </div>

@@ -18,11 +18,11 @@ export function Projects() {
     {
       id: 1,
       title: "JobFinder Web App",
-      tech: "Next.js, NestJS, Tailwind CSS, PostgreSQL",
+      tech: "TypeScript, Next.js, NestJS, Tailwind CSS, PostgreSQL",
       description:
         "A comprehensive job portal connecting seekers and recruiters, featuring job search, applications, premium subscriptions, and resume uploads.",
       github: "https://github.com/sakibscript/JobFinder-Web-Application",
-      live: "https://jobfinder-demo.vercel.app",
+      live: "",
       image: project1,
     },
     {
