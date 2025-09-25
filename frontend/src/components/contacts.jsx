@@ -3,6 +3,10 @@ import {
   FaEnvelope,
   FaLocationDot,
   FaPaperPlane,
+  FaWhatsapp,
+  FaLinkedin,
+  FaGithub,
+  FaClock,
 } from "react-icons/fa6";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -11,21 +15,69 @@ export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const contact = [
+  const contactInfo = [
     {
-      cId: 1,
+      id: 1,
       value: "+880 1866-188084",
-      icon: <FaPhone className="text-primary" />,
+      icon: <FaPhone className="text-xl" />,
+      label: "Phone",
+      link: "tel:+8801866188084",
+      color: "from-green-500 to-emerald-500",
     },
     {
-      cId: 2,
+      id: 2,
       value: "sakibulalam557@gmail.com",
-      icon: <FaEnvelope className="text-primary" />,
+      icon: <FaEnvelope className="text-xl" />,
+      label: "Email",
+      link: "mailto:sakibulalam557@gmail.com",
+      color: "from-blue-500 to-cyan-500",
     },
     {
-      cId: 3,
+      id: 3,
       value: "Bashundhara R/A, Dhaka, Bangladesh",
-      icon: <FaLocationDot className="text-primary" />,
+      icon: <FaLocationDot className="text-xl" />,
+      label: "Location",
+      link: "https://maps.google.com/?q=Bashundhara+R/A,Dhaka,Bangladesh",
+      color: "from-red-500 to-pink-500",
+    },
+    {
+      id: 4,
+      value: "Available for projects",
+      icon: <FaClock className="text-xl" />,
+      label: "Status",
+      link: "#",
+      color: "from-purple-500 to-indigo-500",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      id: 1,
+      icon: <FaWhatsapp className="text-xl" />,
+      label: "WhatsApp",
+      url: "https://wa.me/8801866188084",
+      color: "from-green-400 to-green-600",
+    },
+    {
+      id: 2,
+      icon: <FaLinkedin className="text-xl" />,
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/sakibul-alam-6ab53b325/",
+      color: "from-blue-400 to-blue-600",
+    },
+    {
+      id: 3,
+      icon: <FaGithub className="text-xl" />,
+      label: "GitHub",
+      url: "https://github.com/sakibscript",
+      color: "from-gray-400 to-gray-600",
+    },
+    {
+      id: 4,
+      icon: <FaEnvelope className="text-xl" />,
+      label: "Email",
+      url: "mailto:sakibulalam557@gmail.com",
+      color: "from-red-400 to-red-600",
     },
   ];
 
@@ -51,7 +103,7 @@ export function Contact() {
 
       if (res.ok) {
         toast.success(data.message || "Message sent successfully!");
-        setForm({ name: "", email: "", message: "" }); // clear form
+        setForm({ name: "", email: "", message: "" });
       } else {
         toast.error(
           data.errors?.join(", ") || data.message || "Failed to send message"
@@ -65,131 +117,229 @@ export function Contact() {
   };
 
   return (
-    <section className="animate-fadeIn text-text-para_light dark:text-text-para_dark">
-      <Toaster
-        position="top-right"
-        toastOptions={{
-          // Default styles for all toasts
-          style: {
-            background: "rgba(17, 25, 40, 0.75)", // glass background
-            color: "#fff",
-            backdropFilter: "blur(10px)",
-            borderRadius: "12px",
-            padding: "12px 16px",
-            fontSize: "14px",
-            fontWeight: "500",
-            boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
-          },
-          success: {
-            style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)", // green gradient
-              color: "white",
-            },
-            iconTheme: {
-              primary: "white",
-              secondary: "green",
-            },
-          },
-          error: {
-            style: {
-              background: "linear-gradient(to right, #ff416c, #ff4b2b)", // red gradient
-              color: "white",
-            },
-            iconTheme: {
-              primary: "white",
-              secondary: "red",
-            },
-          },
-        }}
-      />
-      {/* Heading */}
-      <div className="text-center mb-12 relative ">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary relative inline-block">
-          Get In <span className="text-accent">Touch</span>
-        </h2>
-        <div className="absolute inset-x-0 top-full flex justify-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary/20 blur-sm select-none transform scale-y-[-1]">
-            Get In <span className="text-accent/20">Touch</span>
-          </h2>
+    <section className="py-20">
+      <Toaster />
+
+      {/* Header */}
+      <div className="text-center mb-16">
+        <div className="inline-flex items-center gap-2 bg-primary/10 dark:bg-primary/20 border border-primary/20 rounded-full px-4 py-2 mb-4">
+          <FaPaperPlane className="text-primary" />
+          <span className="text-primary font-medium text-sm">
+            Let's Connect
+          </span>
         </div>
+
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+          Get In{" "}
+          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Touch
+          </span>
+        </h2>
+
+        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          Ready to bring your ideas to life? Let's discuss your project and
+          create something amazing together.
+        </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center w-full mx-auto">
-        {/* Left side */}
-        <div className="flex flex-col justify-center items-start gap-6">
-          <h1 className="text-3xl font-semibold">Contact Information</h1>
-          <p className="text-sm">
-            I’m always excited to connect, collaborate, or discuss new
-            opportunities. Whether you have a project in mind, a question, feel
-            free to reach out!
-          </p>
-          {contact.map((con) => (
-            <div key={con.cId} className="flex items-center gap-2">
-              <div className="text-2xl p-2">{con.icon}</div>
-              <div className="flex flex-col ">
-                <span>{con.value}</span>
+
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Let's Start a Conversation
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                I'm always excited to connect, collaborate, or discuss new
+                opportunities. Whether you have a project in mind, a question,
+                or just want to say hello - feel free to reach out!
+              </p>
+            </div>
+
+            {/* Contact Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {contactInfo.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.link}
+                  target={item.link.startsWith("http") ? "_blank" : "_self"}
+                  rel={
+                    item.link.startsWith("http") ? "noopener noreferrer" : ""
+                  }
+                  className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 
+                             border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl 
+                             transition-all duration-500 hover:scale-105 cursor-pointer 
+                             min-w-0"
+                >
+                  <div className="flex items-center gap-4">
+                    <div
+                      className={`p-3 rounded-xl bg-gradient-to-r ${item.color} text-white shadow-lg`}
+                    >
+                      {item.icon}
+                    </div>
+                    <div className="min-w-0">
+                      {" "}
+                      {/* Added min-w-0 */}
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        {item.label}
+                      </p>
+                      <p
+                        className="font-semibold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent 
+                        break-words overflow-hidden"
+                      >
+                        {item.value}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                Follow Me On
+              </h4>
+              <div className="flex gap-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.id}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-4 rounded-xl bg-gradient-to-r ${social.color} text-white shadow-lg 
+                             hover:shadow-xl transition-all duration-300 transform hover:scale-110 
+                             hover:rotate-3 group`}
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Contact Form */}
+          <div
+            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 
+                        border border-gray-200/50 dark:border-gray-700/50 shadow-xl overflow-hidden"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              Send Me a Message
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
+              Let's discuss your project requirements
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2 min-w-0">
+                  <label
+                    htmlFor="name"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
+                    Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="E.g., John Doe"
+                    className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-gray-900/50 
+                             border border-gray-200/50 dark:border-gray-700/50 
+                             placeholder-gray-400 dark:placeholder-gray-500
+                             focus:ring-2 focus:ring-primary/50 focus:border-transparent
+                             transition-all duration-300 backdrop-blur-sm box-border min-w-0"
+                  />
+                </div>
+
+                <div className="space-y-2 min-w-0">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="E.g., johndoe@gmail.com"
+                    className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-gray-900/50 
+                             border border-gray-200/50 dark:border-gray-700/50 
+                             placeholder-gray-400 dark:placeholder-gray-500
+                             focus:ring-2 focus:ring-primary/50 focus:border-transparent
+                             transition-all duration-300 backdrop-blur-sm box-border min-w-0"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                >
+                  Your Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  rows={6}
+                  placeholder="Tell me about your project..."
+                  className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-gray-900/50 
+                           border border-gray-200/50 dark:border-gray-700/50 
+                           placeholder-gray-400 dark:placeholder-gray-500
+                           focus:ring-2 focus:ring-primary/50 focus:border-transparent
+                           transition-all duration-300 backdrop-blur-sm resize-none box-border"
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gradient-to-r from-primary to-accent text-white py-4 rounded-xl 
+                         font-semibold shadow-lg hover:shadow-xl transition-all duration-300 
+                         transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed
+                         disabled:hover:scale-100 flex items-center justify-center gap-3 group"
+              >
+                {loading ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    Sending Message...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <FaPaperPlane className="group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
+              </button>
+            </form>
+          </div>
         </div>
 
-        {/* Right side - Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col justify-center items-start gap-6 w-full"
-        >
-          <h1 className="text-3xl font-semibold">Let's connect</h1>
-
-          <input
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            className="p-3 w-full rounded-xl bg-bg_input_light/70 dark:bg-bg_input_dark/70
-             border border-inputBorder_light dark:border-inputBorder_dark
-             placeholder-placeholder_light dark:placeholder-placeholder_dark
-             shadow-sm backdrop-blur-sm focus:ring-2 focus:ring-primary
-             focus:border-primary transition-all duration-300"
-          />
-
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            className="p-3 w-full rounded-xl bg-bg_input_light/70 dark:bg-bg_input_dark/70
-             border border-inputBorder_light dark:border-inputBorder_dark
-             placeholder-placeholder_light dark:placeholder-placeholder_dark
-             shadow-sm backdrop-blur-sm focus:ring-2 focus:ring-primary
-             focus:border-primary transition-all duration-300"
-          />
-
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="Type your message here"
-            className="p-3 w-full rounded-xl bg-bg_input_light/70 dark:bg-bg_input_dark/70
-             border border-inputBorder_light dark:border-inputBorder_dark
-             placeholder-placeholder_light dark:placeholder-placeholder_dark
-             shadow-sm backdrop-blur-sm focus:ring-2 focus:ring-primary
-             focus:border-primary transition-all duration-300 h-40 resize-none"
-          />
-
-          <button
-            type="submit"
-            disabled={loading}
-            className="px-6 py-3 rounded-xl font-semibold text-white
-                       bg-gradient-to-r from-primary to-accent
-                       shadow-md hover:shadow-xl hover:scale-105
-                       transition-all duration-300 flex items-center gap-2
-                       focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50"
-          >
-            {loading ? "Sending..." : "Send Message"}
-            <FaPaperPlane className="animate-pulse" />
-          </button>
-        </form>
+        {/* Quick Response Info */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-8 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-green-600 dark:text-green-400 font-medium">
+                Quick Response Guaranteed
+              </span>
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">
+              I typically respond to messages within a few hours. For urgent
+              inquiries, feel free to call or message me on WhatsApp.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

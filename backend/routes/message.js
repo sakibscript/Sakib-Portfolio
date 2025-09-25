@@ -1,4 +1,3 @@
-// routes/message.js
 const { Router } = require("express");
 const { z } = require("zod");
 const { messageModel } = require("../db");

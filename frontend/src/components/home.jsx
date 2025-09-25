@@ -1,4 +1,10 @@
-import { FaDownload, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
+import {
+  FaDownload,
+  FaGithub,
+  FaLinkedinIn,
+  FaTwitter,
+  FaArrowRight,
+} from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Me from "../assets/me.png";
 import resume from "../assets/Resume-Sakib.pdf";
@@ -10,16 +16,19 @@ export function Home() {
       id: 1,
       icon: <FaGithub />,
       url: "https://github.com/sakibscript",
+      label: "GitHub",
     },
     {
       id: 2,
       icon: <FaLinkedinIn />,
       url: "https://www.linkedin.com/in/sakibul-alam-6ab53b325/",
+      label: "LinkedIn",
     },
     {
       id: 3,
       icon: <FaTwitter />,
       url: "https://twitter.com/sakibscript",
+      label: "Twitter",
     },
   ];
 
@@ -28,26 +37,30 @@ export function Home() {
       id: 1,
       statTitle: "Years of Experience",
       statValue: "1",
+      suffix: "+",
     },
     {
       id: 2,
       statTitle: "Projects Completed",
-      statValue: "8",
+      statValue: "12",
+      suffix: "+",
     },
     {
       id: 3,
       statTitle: "Technologies Mastered",
-      statValue: "14",
+      statValue: "20",
+      suffix: "+",
     },
     {
       id: 4,
       statTitle: "Code Commits",
-      statValue: "80",
+      statValue: "100",
+      suffix: "+",
     },
   ];
 
   function useCountUp(to, duration = 2000) {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
     const raf = useRef();
 
     useEffect(() => {
@@ -74,69 +87,98 @@ export function Home() {
   }
 
   return (
-    <div className="flex justify-center flex-col animate-fadeIn gap-20">
-      <div className="flex flex-col lg:flex-row justify-around items-center gap-14 w-full max-w-7xl">
-        {/* Text Content */}
-        <div className="flex flex-col justify-center items-start gap-4 max-w-2xl text-start lg:text-left">
-          <span className="text-primary font-medium">Software Developer</span>
-          <h1 className="text-2xl md:text-3xl font-semibold text-text-para_light dark:text-text-para_dark">
-            Hello I'm
-          </h1>
-          <h2 className="text-5xl md:text-6xl font-bold text-primary-dark">
-            Sakibul Alam
-          </h2>
-          <p className="text-sm md:text-base text-text-para_light dark:text-text-para_dark leading-relaxed">
-            Passionate about building modern, scalable, and responsive web
-            applications. Always eager to learn and explore the latest
-            technologies in web development.
+    <div className="flex justify-center flex-col animate-fadeIn gap-16 lg:gap-24">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-8 w-full max-w-7xl mx-auto">
+        <div className="flex flex-col justify-center items-start gap-6 max-w-2xl text-center lg:text-left order-2 lg:order-1">
+          <div className="inline-flex items-center gap-2 bg-primary/10 dark:bg-primary/20 border border-primary/20 rounded-full px-4 py-2">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <span className="text-primary font-medium text-sm">
+              Software Developer
+            </span>
+          </div>
+
+          {/* Headings */}
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+              Hi,I'm <br />
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Sakibul Alam
+              </span>
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 dark:text-gray-300">
+              Building Digital Experiences That Matter
+            </h2>
+          </div>
+
+          {/* Description */}
+          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
+            Passionate full-stack developer specializing in creating modern,
+            scalable, and responsive web applications. I transform ideas into
+            seamless digital experiences using cutting-edge technologies.
           </p>
 
-          {/* Resume & Social Links */}
-          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 mt-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <a
               href={resume}
               download={true}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-primary rounded-2xl px-4 py-2 text-text-para_light dark:text-text-para_dark cursor-pointer 
-                         hover:text-primary dark:hover:text-primary hover:border-primary hover:shadow-glow flex items-center gap-2 text-sm transition-all duration-300"
+              className="group bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-xl font-medium 
+                         transition-all duration-300 transform hover:scale-105 hover:shadow-lg 
+                         flex items-center gap-2 text-base shadow-md"
             >
-              RESUME
-              <FaDownload className="h-4 w-4" />
+              Download Resume
+              <FaDownload className="h-4 w-4 group-hover:animate-bounce" />
             </a>
 
-            {/* Social links */}
-            <div className="flex gap-4">
+            <a
+              href="#projects"
+              className="group border-2 border-primary text-primary hover:bg-primary hover:text-white 
+                         px-8 py-3 rounded-xl font-medium transition-all duration-300 transform 
+                         hover:scale-105 flex items-center gap-2 text-base"
+            >
+              View My Work
+              <FaArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex flex-col gap-4 mt-6">
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
+              Follow me on
+            </p>
+            <div className="flex gap-3">
               {links.map((link) => (
                 <Link
                   key={link.id}
                   to={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-primary rounded-2xl px-3 py-2 text-text-para_light dark:text-text-para_dark 
-                             cursor-pointer hover:text-primary  dark:hover:text-primary hover:border-primary hover:shadow-glow transition-all duration-300"
+                  className="group bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 
+                             rounded-xl p-3 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary 
+                             hover:border-primary/50 hover:shadow-lg transition-all duration-300 transform hover:scale-110
+                             relative tooltip"
+                  aria-label={link.label}
                 >
                   {link.icon}
+                  <span
+                    className="tooltip-text absolute -bottom-8 left-1/2 transform -translate-x-1/2 
+                                 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 
+                                 transition-opacity duration-300 whitespace-nowrap"
+                  >
+                    {link.label}
+                  </span>
                 </Link>
               ))}
             </div>
           </div>
         </div>
-        {/* Profile Image */}
-        {/* <div className="rounded-full p-1 bg-gradient-to-b from-primary/60 to-accent/50 shadow-accent/40 shadow-2xl">
-          <img
-            src={Me}
-            alt="Sakibul Alam"
-            className="rounded-full w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover border-4 border-background-light dark:border-background-dark shadow-2xl 
-                       hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      </div> */}
 
         <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex-shrink-0 mx-auto">
           <div
-            className="absolute inset-0 rounded-full 
-    bg-gradient-to-tr from-sky-500 via-slate-400 to-teal-600 
+            className="absolute inset-0 rounded-full
+    bg-gradient-to-tr from-sky-500 via-slate-400 to-teal-600
     dark:from-sky-600 dark:via-slate-500 dark:to-teal-700
     animate-spin-slow blur-3xl opacity-50 z-0"
           ></div>
@@ -146,33 +188,53 @@ export function Home() {
           <img
             src={Me}
             alt="Sakibul Alam"
-            className="relative w-full h-full object-cover rounded-full z-20 shadow-2xl 
+            className="relative w-full h-full object-cover rounded-full z-20 shadow-2xl
       transition-transform duration-500 hover:scale-110 "
           />
         </div>
       </div>
 
       {/* Stats Section */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 w-full mx-auto">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-5xl mx-auto">
         {stats.map((stat) => {
           const count = useCountUp(stat.statValue);
           return (
             <div
               key={stat.id}
-              className="flex items-center justify-center gap-4"
+              className="group bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 
+                         rounded-2xl p-6 text-center hover:shadow-xl hover:border-primary/30 transition-all duration-300 
+                         transform hover:-translate-y-2"
             >
-              <h1
-                className="text-4xl md:text-5xl font-bold  bg-gradient-to-r from-primary to-accent 
-                     text-transparent bg-clip-text"
-              >
-                {count}
-              </h1>
-              <p className="text-sm w-16 text-text-para_light/80 dark:text-text-para_dark/80">
-                {stat.statTitle}
-              </p>
+              <div className="flex flex-col items-center gap-2">
+                <div className="relative">
+                  <h1
+                    className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent 
+                               text-transparent bg-clip-text"
+                  >
+                    {count}
+                    <span className="text-accent">{stat.suffix}</span>
+                  </h1>
+                </div>
+                <p
+                  className="text-sm font-medium text-gray-600 dark:text-gray-400 group-hover:text-gray-900 
+                            dark:group-hover:text-white transition-colors"
+                >
+                  {stat.statTitle}
+                </p>
+              </div>
             </div>
           );
         })}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="flex justify-center mt-8">
+        <div className="animate-bounce flex flex-col items-center gap-2 text-gray-400">
+          <span className="text-sm">Scroll to explore</span>
+          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
       </div>
     </div>
   );
