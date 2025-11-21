@@ -28,7 +28,7 @@ export function Experience() {
     // },
     {
       id: 1,
-      title: "Web Developer Intern",
+      title: "Assistant Programmer",
       company: "Generation Next IT Solution Ltd.",
       location: "Dhaka, Bangladesh",
       startDate: "2025",
@@ -37,7 +37,7 @@ export function Experience() {
       description:
         "Developed and enhanced web applications using ASP.NET, C#, and SQL Server, implemented responsive UI with HTML, CSS, JavaScript, and jQuery, and contributed to improving performance and functionality of ERP modules.",
       technologies: ["ASP .NET", "C#", "MS SQL Server", "JQuery", "Bootstrap"],
-      type: "Assistant Programmer",
+      type: "Full-time",
       achievements: [
         "Completed ERP module with full CRUD functionality",
         "Improved form validation and user experience using jQuery & AJAX",
