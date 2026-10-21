@@ -79,7 +79,7 @@ export default function App() {
         position="top-center"
         toastOptions={{
           style: {
-            background: "rgba(17, 25, 40, 0.95)",
+            background: "rgba(15, 23, 42, 0.96)",
             color: "#fff",
             backdropFilter: "blur(20px)",
             borderRadius: "16px",
@@ -92,15 +92,15 @@ export default function App() {
           },
           success: {
             style: {
-              background: "linear-gradient(135deg, #00b09b, #96c93d)",
+              background: "#2563EB",
             },
-            iconTheme: { primary: "white", secondary: "#00b09b" },
+            iconTheme: { primary: "white", secondary: "#2563EB" },
           },
           error: {
             style: {
-              background: "linear-gradient(135deg, #ff416c, #ff4b2b)",
+              background: "#B91C1C",
             },
-            iconTheme: { primary: "white", secondary: "#ff416c" },
+            iconTheme: { primary: "white", secondary: "#B91C1C" },
           },
         }}
       />
@@ -118,7 +118,7 @@ export default function App() {
       />
 
       {/* Progress Indicator */}
-      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 flex flex-col gap-3 lg:flex">
+      <div className="portfolio-progress-nav fixed right-6 top-1/2 transform -translate-y-1/2 z-40 flex flex-col gap-3 lg:flex">
         {["home", "services", "resume", "projects", "contact"].map(
           (section) => (
             <button

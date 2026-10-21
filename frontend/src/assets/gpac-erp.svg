@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F2EA"/>
+      <stop offset="1" stop-color="#E4E9E2"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#416E5A"/>
+      <stop offset="1" stop-color="#264438"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" rx="32" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1280" height="84" rx="32" fill="#1C2821"/>
+  <rect x="0" y="52" width="1280" height="32" fill="#1C2821"/>
+  <rect x="40" y="22" width="40" height="40" rx="12" fill="url(#brand)"/>
+  <path d="M50 48V34h7c5 0 8 2 8 6s-3 6-8 6h-7Zm7-4c2 0 3-1 3-3s-1-3-3-3h-2v6h2Z" fill="#F5F4EF"/>
+  <text x="96" y="43" fill="#F5F4EF" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700">GPAC ERP</text>
+  <text x="97" y="63" fill="#B7C4B9" font-family="Inter,Arial,sans-serif" font-size="12" letter-spacing="1.5">BUSINESS MANAGEMENT</text>
+  <rect x="40" y="112" width="230" height="642" rx="20" fill="#FFFFFF" stroke="#E0E4DC"/>
+  <text x="65" y="153" fill="#7A857B" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="600" letter-spacing="1.4">WORKSPACE</text>
+  <rect x="56" y="177" width="198" height="50" rx="12" fill="#E7EEE8"/>
+  <rect x="72" y="193" width="18" height="18" rx="5" fill="#31584B"/>
+  <text x="103" y="205" fill="#244438" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700">Dashboard</text>
+  <g fill="#69766B" font-family="Inter,Arial,sans-serif" font-size="14">
+    <text x="103" y="267">Accounting</text><text x="103" y="320">Sales</text><text x="103" y="373">Purchase</text><text x="103" y="426">Stock</text><text x="103" y="479">POS Reporting</text><text x="103" y="532">VAT Reports</text>
+  </g>
+  <g fill="#B0B8AE"><rect x="72" y="251" width="18" height="18" rx="5"/><rect x="72" y="304" width="18" height="18" rx="5"/><rect x="72" y="357" width="18" height="18" rx="5"/><rect x="72" y="410" width="18" height="18" rx="5"/><rect x="72" y="463" width="18" height="18" rx="5"/><rect x="72" y="516" width="18" height="18" rx="5"/></g>
+  <text x="310" y="145" fill="#24352A" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">Business Overview</text>
+  <text x="310" y="174" fill="#778278" font-family="Inter,Arial,sans-serif" font-size="15">A unified view of daily operations</text>
+  <g>
+    <rect x="310" y="203" width="212" height="140" rx="18" fill="#FFFFFF" stroke="#E0E4DC"/>
+    <rect x="542" y="203" width="212" height="140" rx="18" fill="#FFFFFF" stroke="#E0E4DC"/>
+    <rect x="774" y="203" width="212" height="140" rx="18" fill="#FFFFFF" stroke="#E0E4DC"/>
+    <rect x="1006" y="203" width="234" height="140" rx="18" fill="#FFFFFF" stroke="#E0E4DC"/>
+    <g font-family="Inter,Arial,sans-serif" font-size="14" fill="#69766B"><text x="334" y="238">Sales Overview</text><text x="566" y="238">Purchase</text><text x="798" y="238">Stock Items</text><text x="1030" y="238">Receivables</text></g>
+    <g font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" fill="#24352A"><text x="334" y="283">৳ 2.4M</text><text x="566" y="283">৳ 1.2M</text><text x="798" y="283">1,248</text><text x="1030" y="283">৳ 840K</text></g>
+    <g font-family="Inter,Arial,sans-serif" font-size="12" fill="#416E5A"><text x="334" y="314">Monthly summary</text><text x="566" y="314">Vendor records</text><text x="798" y="314">Inventory status</text><text x="1030" y="314">Pending invoices</text></g>
+  </g>
+  <rect x="310" y="367" width="590" height="350" rx="18" fill="#FFFFFF" stroke="#E0E4DC"/>
+  <text x="338" y="408" fill="#24352A" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700">Transaction Activity</text>
+  <text x="338" y="433" fill="#8A948A" font-family="Inter,Arial,sans-serif" font-size="13">Illustrative dashboard preview</text>
+  <g stroke="#E8ECE5" stroke-width="1"><path d="M345 488H864M345 538H864M345 588H864M345 638H864"/></g>
+  <g fill="#6F9880"><rect x="370" y="566" width="36" height="72" rx="7"/><rect x="432" y="528" width="36" height="110" rx="7"/><rect x="494" y="546" width="36" height="92" rx="7"/><rect x="556" y="493" width="36" height="145" rx="7"/><rect x="618" y="516" width="36" height="122" rx="7"/><rect x="680" y="473" width="36" height="165" rx="7"/><rect x="742" y="501" width="36" height="137" rx="7"/><rect x="804" y="458" width="36" height="180" rx="7"/></g>
+  <rect x="920" y="367" width="320" height="350" rx="18" fill="#FFFFFF" stroke="#E0E4DC"/>
+  <text x="948" y="408" fill="#24352A" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700">Core Modules</text>
+  <g font-family="Inter,Arial,sans-serif" font-size="15" fill="#566358">
+    <text x="977" y="462">Accounting &amp; Vouchers</text><text x="977" y="513">Sales &amp; Invoicing</text><text x="977" y="564">Purchase Management</text><text x="977" y="615">Inventory &amp; Stock</text><text x="977" y="666">VAT &amp; Reporting</text>
+  </g>
+  <g fill="#E6EEE7"><circle cx="954" cy="457" r="13"/><circle cx="954" cy="508" r="13"/><circle cx="954" cy="559" r="13"/><circle cx="954" cy="610" r="13"/><circle cx="954" cy="661" r="13"/></g>
+  <g fill="#31584B"><path d="M949 457l4 4 7-8 2 2-9 10-6-6z"/><path d="M949 508l4 4 7-8 2 2-9 10-6-6z"/><path d="M949 559l4 4 7-8 2 2-9 10-6-6z"/><path d="M949 610l4 4 7-8 2 2-9 10-6-6z"/><path d="M949 661l4 4 7-8 2 2-9 10-6-6z"/></g>
+</svg>

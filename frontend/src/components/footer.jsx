@@ -22,21 +22,21 @@ export function Footer() {
       icon: <FaLinkedin />,
       url: "https://www.linkedin.com/in/sakibul-alam-6ab53b325/",
       label: "LinkedIn",
-      color: "hover:text-blue-400",
+      color: "hover:text-primary dark:hover:text-[#BFDBFE]",
     },
     {
       id: 3,
       icon: <FaTwitter />,
       url: "https://twitter.com/sakibscript",
       label: "Twitter",
-      color: "hover:text-sky-400",
+      color: "hover:text-primary dark:hover:text-[#BFDBFE]",
     },
     {
       id: 4,
       icon: <FaEnvelope />,
       url: "mailto:sakibulalam557@gmail.com",
       label: "Email",
-      color: "hover:text-red-400",
+      color: "hover:text-primary dark:hover:text-[#BFDBFE]",
     },
   ];
 

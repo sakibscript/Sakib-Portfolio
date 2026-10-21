@@ -117,7 +117,7 @@ export const Navbar = ({
                   }`}
                 >
                   {darkMode ? (
-                    <FaSun className="text-yellow-400 w-3 h-3 mx-auto" />
+                    <FaSun className="text-[#06B6D4] w-3 h-3 mx-auto" />
                   ) : (
                     <FaMoon className="text-gray-800 w-3 h-3 mx-auto" />
                   )}
@@ -149,7 +149,7 @@ export const Navbar = ({
               aria-label="Toggle theme"
             >
               {darkMode ? (
-                <FaSun className="text-yellow-400" />
+                <FaSun className="text-[#06B6D4]" />
               ) : (
                 <FaMoon className="text-gray-800" />
               )}

@@ -6,7 +6,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import Me from "../assets/me.png";
+import Me from "../assets/me-cutout.png";
 import resume from "../assets/Resume-Sakib.pdf";
 import { useEffect, useRef, useState } from "react";
 
@@ -175,21 +175,23 @@ export function Home() {
           </div>
         </div>
 
-        <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex-shrink-0 mx-auto">
+        <div className="profile-photo-scene relative mx-auto">
+          <div className="profile-photo-blob" aria-hidden="true"></div>
           <div
-            className="absolute inset-0 rounded-full
-    bg-gradient-to-tr from-sky-500 via-slate-400 to-teal-600
-    dark:from-sky-600 dark:via-slate-500 dark:to-teal-700
-    animate-spin-slow blur-3xl opacity-50 z-0"
-          ></div>
-
-          <div className="absolute inset-1 rounded-full border-4 border-white/30 backdrop-blur-sm z-10"></div>
-
+            className="absolute right-[8%] top-[12%] z-0 grid grid-cols-3 gap-2 opacity-70"
+            aria-hidden="true"
+          >
+            <span className="h-2 w-2 rounded-full bg-[#93C5FD]"></span>
+            <span className="h-2 w-2 rounded-full bg-[#BFDBFE]"></span>
+            <span className="h-2 w-2 rounded-full bg-[#93C5FD]"></span>
+            <span className="h-2 w-2 rounded-full bg-[#BFDBFE]"></span>
+            <span className="h-2 w-2 rounded-full bg-[#60A5FA]"></span>
+            <span className="h-2 w-2 rounded-full bg-[#BFDBFE]"></span>
+          </div>
           <img
             src={Me}
             alt="Sakibul Alam"
-            className="relative w-full h-full object-cover rounded-full z-20 shadow-2xl
-      transition-transform duration-500 hover:scale-110 "
+            className="profile-photo relative z-10 transition-transform duration-500 hover:scale-[1.025]"
           />
         </div>
       </div>

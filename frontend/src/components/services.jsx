@@ -20,9 +20,9 @@ export function Services() {
       desc: "Building responsive, modern, and optimized UIs using React, Tailwind, and modern tools.",
       icon: <FaCode className="text-2xl" />,
       features: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-primary to-accent",
       bgGradient:
-        "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20",
+        "from-[#F8FAFC] to-[#EFF6FF] dark:from-[#1E293B] dark:to-[#111827]",
     },
     {
       id: "02",
@@ -30,9 +30,9 @@ export function Services() {
       desc: "Creating robust APIs and server-side logic with Node.js, Express, .NET, and secure databases.",
       icon: <FaServer className="text-2xl" />,
       features: ["Node.js", "Express", ".NET", "REST APIs"],
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-primary to-accent",
       bgGradient:
-        "from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20",
+        "from-[#F8FAFC] to-[#EFF6FF] dark:from-[#1E293B] dark:to-[#111827]",
     },
     {
       id: "03",
@@ -40,9 +40,9 @@ export function Services() {
       desc: "Efficient schema design, query optimization with MySQL, MongoDB, PostgreSQL, and PL/SQL.",
       icon: <FaDatabase className="text-2xl" />,
       features: ["MySQL", "MongoDB", "PostgreSQL", "oracle"],
-      gradient: "from-green-500 to-emerald-500",
+      gradient: "from-primary to-accent",
       bgGradient:
-        "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20",
+        "from-[#F8FAFC] to-[#EFF6FF] dark:from-[#1E293B] dark:to-[#111827]",
     },
     {
       id: "04",
@@ -50,9 +50,9 @@ export function Services() {
       desc: "Building smart apps with predictive models and automation using AI/ML solutions.",
       icon: <FaRobot className="text-2xl" />,
       features: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-primary to-accent",
       bgGradient:
-        "from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20",
+        "from-[#F8FAFC] to-[#EFF6FF] dark:from-[#1E293B] dark:to-[#111827]",
     },
   ];
 

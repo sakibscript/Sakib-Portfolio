@@ -49,7 +49,7 @@ export function Skills() {
       name: "HTML5",
       category: "frontend",
       level: 95,
-      color: "from-orange-500 to-orange-600",
+      color: "from-primary to-accent",
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ export function Skills() {
       name: "CSS3",
       category: "frontend",
       level: 90,
-      color: "from-blue-500 to-blue-600",
+      color: "from-primary to-accent",
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ export function Skills() {
       name: "JavaScript",
       category: "frontend",
       level: 88,
-      color: "from-yellow-500 to-yellow-600",
+      color: "from-primary to-accent",
     },
     {
       id: 4,
@@ -73,7 +73,7 @@ export function Skills() {
       name: "React",
       category: "frontend",
       level: 85,
-      color: "from-cyan-500 to-cyan-600",
+      color: "from-primary to-accent",
     },
     {
       id: 5,
@@ -81,7 +81,7 @@ export function Skills() {
       name: "Tailwind CSS",
       category: "frontend",
       level: 92,
-      color: "from-teal-500 to-teal-600",
+      color: "from-primary to-accent",
     },
 
     {
@@ -90,7 +90,7 @@ export function Skills() {
       name: "Node.js",
       category: "backend",
       level: 82,
-      color: "from-green-500 to-green-600",
+      color: "from-primary to-accent",
     },
     {
       id: 7,
@@ -98,7 +98,7 @@ export function Skills() {
       name: "Express.js",
       category: "backend",
       level: 80,
-      color: "from-gray-500 to-gray-600",
+      color: "from-primary to-accent",
     },
     {
       id: 8,
@@ -106,7 +106,7 @@ export function Skills() {
       name: "NestJS",
       category: "backend",
       level: 75,
-      color: "from-red-500 to-red-600",
+      color: "from-primary to-accent",
     },
     {
       id: 9,
@@ -114,7 +114,7 @@ export function Skills() {
       name: "PHP",
       category: "backend",
       level: 78,
-      color: "from-purple-500 to-purple-600",
+      color: "from-primary to-accent",
     },
     {
       id: 10,
@@ -122,7 +122,7 @@ export function Skills() {
       name: ".NET",
       category: "backend",
       level: 70,
-      color: "from-purple-600 to-purple-700",
+      color: "from-primary to-accent",
     },
 
     {
@@ -131,7 +131,7 @@ export function Skills() {
       name: "PostgreSQL",
       category: "database",
       level: 85,
-      color: "from-blue-600 to-blue-700",
+      color: "from-primary to-accent",
     },
     {
       id: 12,
@@ -139,7 +139,7 @@ export function Skills() {
       name: "MySQL",
       category: "database",
       level: 88,
-      color: "from-orange-600 to-orange-700",
+      color: "from-primary to-accent",
     },
     {
       id: 13,
@@ -147,7 +147,7 @@ export function Skills() {
       name: "MongoDB",
       category: "database",
       level: 80,
-      color: "from-green-600 to-green-700",
+      color: "from-primary to-accent",
     },
     {
       id: 14,
@@ -155,7 +155,7 @@ export function Skills() {
       name: "PL/SQL",
       category: "database",
       level: 82,
-      color: "from-red-600 to-red-700",
+      color: "from-primary to-accent",
     },
 
     {
@@ -164,7 +164,7 @@ export function Skills() {
       name: "Python",
       category: "ai-ml",
       level: 85,
-      color: "from-yellow-600 to-yellow-700",
+      color: "from-primary to-accent",
     },
     {
       id: 16,
@@ -172,7 +172,7 @@ export function Skills() {
       name: "C++",
       category: "",
       level: 78,
-      color: "from-blue-700 to-blue-800",
+      color: "from-primary to-accent",
     },
     {
       id: 17,
@@ -180,7 +180,7 @@ export function Skills() {
       name: "C#",
       category: "",
       level: 75,
-      color: "from-purple-700 to-purple-800",
+      color: "from-primary to-accent",
     },
     {
       id: 18,
@@ -188,7 +188,7 @@ export function Skills() {
       name: "Pandas",
       category: "ai-ml",
       level: 80,
-      color: "from-red-700 to-red-800",
+      color: "from-primary to-accent",
     },
     {
       id: 19,
@@ -196,7 +196,7 @@ export function Skills() {
       name: "Scikit-learn",
       category: "ai-ml",
       level: 72,
-      color: "from-orange-700 to-orange-800",
+      color: "from-primary to-accent",
     },
 
     {
@@ -205,7 +205,7 @@ export function Skills() {
       name: "Git",
       category: "tools",
       level: 90,
-      color: "from-orange-800 to-orange-900",
+      color: "from-primary to-accent",
     },
     {
       id: 21,
@@ -213,7 +213,7 @@ export function Skills() {
       name: "Figma",
       category: "tools",
       level: 85,
-      color: "from-pink-500 to-pink-600",
+      color: "from-primary to-accent",
     },
     {
       id: 22,
@@ -221,7 +221,7 @@ export function Skills() {
       name: "OpenGL",
       category: "",
       level: 70,
-      color: "from-gray-700 to-gray-800",
+      color: "from-primary to-accent",
     },
     {
       id: 23,
@@ -229,7 +229,7 @@ export function Skills() {
       name: "Next.js",
       category: "frontend",
       level: 85,
-      color: "from-gray-800 to-gray-900",
+      color: "from-primary to-accent",
     },
   ];
 

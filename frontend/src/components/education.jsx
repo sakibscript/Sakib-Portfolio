@@ -123,8 +123,8 @@ export function Education() {
                       <span
                         className={`px-2 py-1 text-xs rounded-full font-medium text-center ${
                           edu.status === "In Progress"
-                            ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400"
-                            : "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400"
+                            ? "bg-[#DBEAFE] text-[#1D4ED8] dark:bg-[#1E3A5F] dark:text-[#BFDBFE]"
+                            : "bg-[#DBEAFE] text-[#2563eb] dark:bg-[#1E3A5F] dark:text-[#BFDBFE]"
                         }`}
                       >
                         {edu.status}
@@ -133,7 +133,7 @@ export function Education() {
                   </div>
 
                   <div className="flex flex-col items-end gap-1">
-                    <span className="px-3 py-1 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 text-blue-600 dark:text-blue-400 text-sm rounded-full border border-blue-200 dark:border-blue-800">
+                    <span className="px-3 py-1 bg-[#DBEAFE] dark:bg-[#1E3A5F] text-[#1D4ED8] dark:text-[#BFDBFE] text-sm rounded-full border border-[#BFDBFE] dark:border-[#334155]">
                       {edu.duration}
                     </span>
                     <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">
@@ -215,14 +215,14 @@ export function Education() {
         {/* Ongoing Learning Card */}
         <div className="relative flex gap-6 group mt-8">
           <div className="flex-shrink-0 relative z-10">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
               <FaBook className="text-white text-lg" />
             </div>
           </div>
 
           <div
-            className="flex-1 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 
-                        rounded-2xl p-6 border border-green-200 dark:border-green-800
+            className="flex-1 bg-gradient-to-r from-[#F8FAFC] to-[#EFF6FF] dark:from-[#1E293B] dark:to-[#111827] 
+                        rounded-2xl p-6 border border-[#E2E8F0] dark:border-[#334155]
                         hover:shadow-lg transition-all duration-500 group-hover:scale-[1.02]"
           >
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -237,7 +237,7 @@ export function Education() {
                 (tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-white/50 dark:bg-gray-800/50 text-green-700 dark:text-green-300 text-xs rounded-full border border-green-200 dark:border-green-700"
+                    className="px-3 py-1 bg-white/50 dark:bg-gray-800/50 text-primary dark:text-[#BFDBFE] text-xs rounded-full border border-[#E2E8F0] dark:border-[#334155]"
                   >
                     {tech}
                   </span>

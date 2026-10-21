@@ -22,7 +22,7 @@ export function Contact() {
       icon: <FaPhone className="text-xl" />,
       label: "Phone",
       link: "tel:+8801866188084",
-      color: "from-green-500 to-emerald-500",
+      color: "from-primary to-accent",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export function Contact() {
       icon: <FaEnvelope className="text-xl" />,
       label: "Email",
       link: "mailto:sakibulalam557@gmail.com",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-primary to-accent",
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ export function Contact() {
       icon: <FaLocationDot className="text-xl" />,
       label: "Location",
       link: "https://maps.google.com/?q=Bashundhara+R/A,Dhaka,Bangladesh",
-      color: "from-red-500 to-pink-500",
+      color: "from-primary to-accent",
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ export function Contact() {
       icon: <FaClock className="text-xl" />,
       label: "Status",
       link: "#",
-      color: "from-purple-500 to-indigo-500",
+      color: "from-primary to-accent",
     },
   ];
 
@@ -56,28 +56,28 @@ export function Contact() {
       icon: <FaWhatsapp className="text-xl" />,
       label: "WhatsApp",
       url: "https://wa.me/8801866188084",
-      color: "from-green-400 to-green-600",
+      color: "from-primary to-accent",
     },
     {
       id: 2,
       icon: <FaLinkedin className="text-xl" />,
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/sakibul-alam-6ab53b325/",
-      color: "from-blue-400 to-blue-600",
+      color: "from-primary to-accent",
     },
     {
       id: 3,
       icon: <FaGithub className="text-xl" />,
       label: "GitHub",
       url: "https://github.com/sakibscript",
-      color: "from-gray-400 to-gray-600",
+      color: "from-primary to-accent",
     },
     {
       id: 4,
       icon: <FaEnvelope className="text-xl" />,
       label: "Email",
       url: "mailto:sakibulalam557@gmail.com",
-      color: "from-red-400 to-red-600",
+      color: "from-primary to-accent",
     },
   ];
 
@@ -329,8 +329,8 @@ export function Contact() {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-8 max-w-2xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-green-600 dark:text-green-400 font-medium">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              <span className="text-primary dark:text-[#BFDBFE] font-medium">
                 Quick Response Guaranteed
               </span>
             </div>

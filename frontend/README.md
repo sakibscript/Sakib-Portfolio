@@ -1,12 +1,30 @@
-# React + Vite
+# Sakib Portfolio — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 19, Vite, Tailwind CSS and JavaScript.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install Node.js (LTS recommended), then open a terminal in this folder:
 
-## Expanding the ESLint configuration
+```powershell
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open the local URL Vite prints (usually `http://localhost:5173/`). Keep the terminal running while previewing the site.
+
+## Build for production
+
+```powershell
+npm run build
+npm run preview
+```
+
+## Theme
+
+The UI uses the selected blue/slate theme: `#3882F6` primary, `#2563EB` hover, `#06B6D4` accent, `#F8FAFC` page background, white cards, `#0F172A` primary text and `#64748B` secondary text. The hero portrait uses a pale-blue cut-out backdrop.
+
+## Notes
+
+- The project archive intentionally excludes `node_modules`; install dependencies with `npm install` after extracting.
+- The contact form calls the portfolio's configured backend endpoint. The rest of the portfolio UI can be previewed without the backend.
