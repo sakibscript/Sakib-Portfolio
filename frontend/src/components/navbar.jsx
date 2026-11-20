@@ -4,7 +4,11 @@ const links = [
   { id: "home", label: "Home", description: "Introduction" },
   { id: "services", label: "What I do", description: "Capabilities" },
   { id: "resume", label: "Experience", description: "Work and education" },
-  { id: "projects", label: "Selected work", description: "Projects and research" },
+  {
+    id: "projects",
+    label: "Selected work",
+    description: "Projects and research",
+  },
   { id: "contact", label: "Contact", description: "Get in touch" },
 ];
 
@@ -24,7 +28,9 @@ export const Navbar = ({
         onClick={() => scrollToSection("home")}
         aria-label="Sakibul Alam, home"
       >
-        <span className="brand-name">SAKIBUL ALAM<span className="brand-period">.</span></span>
+        <span className="brand-name">
+          SAKIBUL ALAM<span className="brand-period">.</span>
+        </span>
         <span className="brand-role">SOFTWARE ENGINEER</span>
       </button>
 
@@ -47,24 +53,30 @@ export const Navbar = ({
           type="button"
           className="icon-button"
           onClick={() => setDarkMode(!darkMode)}
-          aria-label={darkMode ? "Switch to light theme" : "Switch to dark theme"}
+          aria-label={
+            darkMode ? "Switch to light theme" : "Switch to dark theme"
+          }
           title="Toggle theme"
         >
           <Icon name={darkMode ? "Sun" : "Moon"} size={18} />
         </button>
-        <button type="button" className="btn-primary nav-cta" onClick={() => scrollToSection("contact")}
+        <button
+          type="button"
+          className="btn-primary nav-cta"
+          onClick={() => scrollToSection("contact")}
         >
           Start a conversation <Icon name="ArrowUpRight" size={16} />
         </button>
       </div>
 
       <div className="mobile-actions">
-        <span className="mobile-role">SOFTWARE ENGINEER</span>
         <button
           type="button"
           className="icon-button"
           onClick={() => setDarkMode(!darkMode)}
-          aria-label={darkMode ? "Switch to light theme" : "Switch to dark theme"}
+          aria-label={
+            darkMode ? "Switch to light theme" : "Switch to dark theme"
+          }
         >
           <Icon name={darkMode ? "Sun" : "Moon"} size={18} />
         </button>
@@ -72,7 +84,9 @@ export const Navbar = ({
           type="button"
           className="icon-button mobile-menu-toggle"
           onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation-panel"
         >
@@ -81,10 +95,16 @@ export const Navbar = ({
       </div>
 
       {menuOpen && (
-        <nav id="mobile-navigation-panel" className="mobile-menu-panel" aria-label="Mobile navigation">
+        <nav
+          id="mobile-navigation-panel"
+          className="mobile-menu-panel"
+          aria-label="Mobile navigation"
+        >
           <div className="mobile-menu-heading">
             <span>Navigate</span>
-            <span className="mobile-menu-caption">SOFTWARE ENGINEER · DHAKA</span>
+            <span className="mobile-menu-caption">
+              SOFTWARE ENGINEER · DHAKA
+            </span>
           </div>
           {links.map((link, index) => (
             <button
@@ -102,7 +122,11 @@ export const Navbar = ({
               <Icon name="ArrowUpRight" size={17} />
             </button>
           ))}
-          <button type="button" className="mobile-menu-contact" onClick={() => scrollToSection("contact")}>
+          <button
+            type="button"
+            className="mobile-menu-contact"
+            onClick={() => scrollToSection("contact")}
+          >
             Let&apos;s talk <Icon name="ArrowUpRight" size={16} />
           </button>
         </nav>
